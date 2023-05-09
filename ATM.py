@@ -1,8 +1,6 @@
 import time
 #Start Of Project 
 print('welcome to the Bank')
-#Asking For Password
-Password=input('Please Enter Your Password\n')
 #A Tuple That Carries Virtual Passwords Database
 Passwords=('1023','1233','6523')
 #A Dictionry To Link Password To Each User
@@ -13,14 +11,16 @@ Accounts = {
 }
 #A Dictionry Having The Accounts Balances
 Balance={'Ahmed':12000,'Peter':4000,'John':3000000}
+#Asking For Password
+Password=input('Please Enter Your Password\n')
 #Password Check
-if Password == Accounts['Ahmed']:
+if Password == Accounts['Ahmed'] :
     print('Please Wait ..')
     time.sleep(1)
     print('Welcome Ahmed')
     while True :
         #Please Choose Your Operation
-        Operation=input('To Withdraw Please Press : 1 \nTo Deposit Please Press : 2\n')
+        Operation=input('To Withdraw Please Press : 1 \nTo Deposit Please Press : 2\nTo Check Your Balance Please Press : 3\n')
         #Withdrawal
         if Operation == '1' :
         #Ask For Withdrawing Amount
@@ -43,20 +43,26 @@ if Password == Accounts['Ahmed']:
                 End=input('For Another Operation Press Y \n For Ending Process Press N\n')
                 if End == 'N':
                  print('Thank You For Using The Bank ..')
-                 break                          
+                 break   
+        elif Operation == '3' :
+                print("Your Balance is = ",Balance['Ahmed']," L.E")
+                End=input('For Another Operation Press Y \n For Ending Process Press N\n')
+                if End == 'N':
+                 print('Thank You For Using The Bank ..')
+                 break                       
         else :
             print('Invalid Operation')
             End=input('For Another Operation Press Y \n For Ending Process Press N\n')
             if End == 'N':
                  print('Thank You For Using The Bank ..')
                  break       
-elif Password == Accounts['Peter']:
+elif  Password == Accounts['Peter']:
     print('Please Wait ..')
     time.sleep(1)
     print('Welcome Peter')
     while True :
         #Please Choose Your Operation
-        Operation=input('To Withdraw Please Press : 1 \n To Deposit Please Press : 2\n')
+        Operation=input('To Withdraw Please Press : 1 \nTo Deposit Please Press : 2\nTo Check Your Balance Please Press : 3\n')
         #Withdrawal
         if Operation == '1' :
         #Ask For Withdrawing Amount
@@ -79,7 +85,13 @@ elif Password == Accounts['Peter']:
                 End=input('For Another Operation Press Y \n For Ending Process Press N\n')
                 if End == 'N':
                  print('Thank You For Using The Bank ..')
-                 break                          
+                 break      
+        elif Operation == '3' :
+                print("Your Balance is = ",Balance['Peter']," L.E")
+                End=input('For Another Operation Press Y \n For Ending Process Press N\n')
+                if End == 'N':
+                 print('Thank You For Using The Bank ..')
+                 break                              
         else :
             print('Invalid Operation')
             End=input('For Another Operation Press Y \n For Ending Process Press N\n')
@@ -92,7 +104,7 @@ elif Password == Accounts['John']:
     print('Welcome John')
     while True :
         #Please Choose Your Operation
-        Operation=input('To Withdraw Please Press : 1 \n To Deposit Please Press : 2\n')
+        Operation=input('To Withdraw Please Press : 1 \nTo Deposit Please Press : 2\nTo Check Your Balance Please Press : 3\n')
         #Withdrawal
         if Operation == '1' :
         #Ask For Withdrawing Amount
@@ -115,7 +127,13 @@ elif Password == Accounts['John']:
                 End=input('For Another Operation Press Y \n For Ending Process Press N\n')
                 if End == 'N':
                  print('Thank You For Using The Bank ..')
-                 break                          
+                 break 
+        elif Operation == '3' :
+                print("Your Balance is = ",Balance['John']," L.E")
+                End=input('For Another Operation Press Y \n For Ending Process Press N\n')
+                if End == 'N':
+                 print('Thank You For Using The Bank ..')
+                 break                                   
         else :
             print('Invalid Operation')
             End = input('For Another Operation Press Y \n For Ending Process Press N\n')
